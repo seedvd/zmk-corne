@@ -10,11 +10,46 @@
 
 / {
     macros {
-        macro1: macro1 {
+        nexttab: nexttab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(TAB)>;
-            label = "MACRO1";
+            label = "NEXTTAB";
+        };
+
+        previoustab: previoustab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(TAB))>;
+            label = "PREVIOUSTAB";
+        };
+
+        wina: wina {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(A)>;
+            label = "WINA";
+        };
+
+        reopentab: reopentab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(T))>;
+            label = "REOPENTAB";
+        };
+
+        closetab: closetab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W)>;
+            label = "CLOSETAB";
+        };
+
+        newtab: newtab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T)>;
+            label = "NEWTAB";
         };
     };
 
@@ -69,8 +104,8 @@
         layer_3 {
             bindings = <
 &kp ESCAPE  &kp HOME  &trans          &kp UP_ARROW    &trans           &kp PAGE_UP      &none  &none  &none  &none  &none  &none
-&none       &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &none  &none  &none  &none  &none  &none
-&none       &none     &none           &none           &none            &none            &none  &none  &none  &none  &none  &none
+&reopentab  &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &none  &none  &none  &none  &none  &none
+&closetab   &newtab   &none           &wina           &previoustab     &nexttab         &none  &none  &none  &none  &none  &none
                                       &none           &none            &none            &none  &none  &none
             >;
         };
