@@ -51,6 +51,20 @@
             bindings = <&kp LC(T)>;
             label = "NEWTAB";
         };
+
+        back: back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_ARROW)>;
+            label = "BACK";
+        };
+
+        foward: foward {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT_ARROW)>;
+            label = "FOWARD";
+        };
     };
 
     keymap {
@@ -103,7 +117,7 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE  &kp HOME  &trans          &kp UP_ARROW    &trans           &kp PAGE_UP      &none      &none  &none  &none  &none  &none
+&kp ESCAPE  &kp HOME  &back           &kp UP_ARROW    &foward          &kp PAGE_UP      &none      &none  &none  &none  &none  &kp DELETE
 &reopentab  &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &none      &none  &none  &none  &none  &none
 &closetab   &newtab   &none           &wina           &previoustab     &nexttab         &none      &none  &none  &none  &none  &none
                                       &none           &none            &none            &kp SPACE  &none  &none
