@@ -140,8 +140,8 @@
         layer_3 {
             bindings = <
 &kp ESCAPE  &kp HOME  &back           &kp UP_ARROW    &foward          &kp PAGE_UP      &msc SCRL_UP    &mkp LCLK        &mmv MOVE_UP    &mkp RCLK        &none    &kp DELETE
-&reopentab  &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none    &zoomreset
-&closetab   &newtab   &none           &wina           &previoustab     &nexttab         &msc SCRL_LEFT  &msc SCRL_RIGHT  &none           &none            &zoomin  &zoomout
+&kp LCTRL   &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none    &zoomreset
+&closetab   &newtab   &reopentab      &wina           &previoustab     &nexttab         &msc SCRL_LEFT  &msc SCRL_RIGHT  &none           &none            &zoomin  &zoomout
                                       &none           &none            &none            &mkp LCLK       &mkp RCLK        &none
             >;
         };
