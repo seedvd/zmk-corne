@@ -55,14 +55,14 @@
         back: back {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LEFT_ARROW)>;
+            bindings = <&kp LA(LEFT_ARROW) &kp ESCAPE>;
             label = "BACK";
         };
 
         foward: foward {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(RIGHT_ARROW)>;
+            bindings = <&kp LA(RIGHT_ARROW) &kp ESCAPE>;
             label = "FOWARD";
         };
     };
