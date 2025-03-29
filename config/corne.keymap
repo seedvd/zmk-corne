@@ -70,14 +70,14 @@
         zoomin: zoomin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(K_SCROLL_UP)>;
+            bindings = <&kp LC(KP_PLUS)>;
             label = "ZOOMIN";
         };
 
         zoomout: zoomout {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(K_SCROLL_DOWN)>;
+            bindings = <&kp LC(KP_MINUS)>;
             label = "ZOOMOUT";
         };
 
